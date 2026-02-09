@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | PAD Consult Services</title>
+    <meta name="description"
+        content="Explore the comprehensive range of audit, tax, accounting, and advisory services offered by PAD Consult Services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#98fb98',   // Sage Green
+                            secondary: '#001f3f', // Navy Blue
+                            accent: '#add8e6',    // Light Blue
+                            darkBlue: '#262673',  // New Pill Background
+                            gold: '#999900',      // New Gold Icon/Pill Icon
+                            lightBlue: '#4dd2ff', // New Light Blue Accent
+                            neutral: '#f8f9fa'    // Off-White background
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+        }
+
+        .bg-pattern {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(#001f3f 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-attachment: fixed;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, #999900 0%, #cc9900 100%);
+        }
+
+        .service-icon.blue {
+            background: linear-gradient(135deg, #4dd2ff 0%, #00aaff 100%);
+        }
+
+        .service-icon.green {
+            background: linear-gradient(135deg, #98fb98 0%, #3cb371 100%);
+        }
+
+        /* Rhombus Buttons */
+        .rhombus-btn {
+            transform: skewX(-20deg);
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rhombus-btn>span {
+            transform: skewX(20deg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rhombus-primary {
+            background: #98fb98;
+            color: #001f3f;
+        }
+
+        .rhombus-primary:hover,
+        .rhombus-primary:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-primary:hover>span,
+        .rhombus-primary:active>span {
+            color: #ffffff;
+        }
+
+        .rhombus-secondary {
+            background: transparent;
+            border: 2px solid #001f3f;
+            color: #001f3f;
+        }
+
+        .rhombus-secondary:hover,
+        .rhombus-secondary:active {
+            background: #f8f9fa;
+            color: #001f3f;
+        }
+
+        .rhombus-navy {
+            background: #001f3f;
+            color: #ffffff;
+        }
+
+        .rhombus-navy:hover,
+        .rhombus-navy:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-navy:hover>span,
+        .rhombus-navy:active>span {
+            color: #ffffff;
+        }
+
+        .glow-btn {
+            box-shadow: 0 4px 15px rgba(152, 251, 152, 0.4);
+        }
+
+        .bg-custom-pattern {
+            background-color: #ffffff;
+            background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#e0eaed55, #e0eaed);
+        }
+    </style>
+</head>
+
+<body class="bg-pattern text-gray-800 font-sans" x-data="{ mobileMenuOpen: false }">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-1 flex justify-between items-center">
+            <a href="index.html" class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                <img src="assets/images/navlogo.png" alt="PAD Consult Services Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Home</a>
+                <a href="about.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">About
+                    Us</a>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-brand-secondary font-bold px-4 py-2 rounded-lg bg-brand-primary/10 transition-all duration-300 transform scale-105">
+                        Services <i class="ph ph-caret-down text-sm"></i>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 w-72 bg-white shadow-2xl rounded-xl py-3 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 z-50 transform origin-top scale-95 group-hover:scale-100">
+                        <a href="services.html"
+                            class="block px-5 py-3 text-gray-700 hover:bg-brand-primary/5 hover:text-brand-primary font-medium transition-colors">
+                            <i class="ph ph-grid-four mr-2"></i> All Services
+                        </a>
+                        <div class="border-t border-gray-100 my-2"></div>
+                        <a href="services/audit-accounting.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Audit
+                            &
+                            Accounting</a>
+                        <a href="services/tax-advisory.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Tax
+                            Advisory & Outsourcing</a>
+                        <a href="services/company-secretarial.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Company
+                            Secretarial Services</a>
+                        <a href="services/financial-management.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Financial
+                            Management & Consulting</a>
+                        <a href="services/business-planning.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Business
+                            Planning</a>
+                    </div>
+                </div>
+                <a href="enterprise.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Enterprise
+                    Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary px-6 py-2.5 font-bold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 rhombus-btn glow-btn">
+                    <span>Get in touch</span>
+                </a>
+            </nav>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-brand-secondary text-3xl">
+                <i :class="mobileMenuOpen ? 'ph ph-x' : 'ph ph-list'"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition
+            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-brand-secondary font-medium text-lg py-2">Home</a>
+                <a href="about.html" class="text-brand-secondary font-medium text-lg py-2">About Us</a>
+                <a href="services.html" class="text-brand-primary font-semibold text-lg py-2">Services</a>
+                <a href="enterprise.html" class="text-brand-secondary font-medium text-lg py-2">Enterprise Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-2">
+                    <span>Contact Us</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden pt-32 pb-20 border-b border-gray-100">
+        <div class="absolute inset-0 bg-custom-pattern pointer-events-none z-0"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm font-medium mb-6"
+                data-aos="fade-up">
+                <i class="ph ph-briefcase text-brand-gold"></i>
+                <span>What We Offer</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-secondary mb-6"
+                data-aos="fade-up" data-aos-delay="100">
+                Our <span class="text-brand-primary">Services</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Comprehensive financial solutions tailored to meet your business needs and drive sustainable growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Audit & Accounting -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up">
+                    <img src="assets/images/audit.jpg" alt="Audit & Accounting"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-brand-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-file-search text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Audit & Accounting</h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Integrated audit assurance and comprehensive
+                            accounting services for financial clarity.</p>
+                        <a href="services/audit-accounting.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Tax Advisory -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img src="assets/images/tax-stock.jpeg" alt="Tax Advisory"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-receipt text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Tax Advisory & Outsourcing</h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Strategic tax planning, compliance, and regulatory
+                            filing services.</p>
+                        <a href="services/tax-advisory.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Company Secretarial -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <img src="assets/images/secretarial.jpeg" alt="Company Secretarial"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-buildings text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Company Secretarial Services</h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Corporate governance, statutory compliance, and
+                            business registration.</p>
+                        <a href="services/company-secretarial.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Financial Management -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <img src="assets/images/meetup.jpg" alt="Financial Management"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-chart-line-up text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Financial Management & Consulting
+                        </h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Expert financial oversight, budgeting, and consulting
+                            for growth.</p>
+                        <a href="services/financial-management.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Business Planning -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <img src="assets/images/businessplan.jpg" alt="Business Planning"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-strategy text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Business Planning & Strategic
+                            Management</h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Strategic roadmaps, market analysis, and long-term
+                            planning.</p>
+                        <a href="services/business-planning.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Enterprise Solutions -->
+                <div class="group relative h-96 rounded-2xl overflow-hidden card-hover" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <img src="assets/images/tablet-group.webp" alt="Enterprise Solutions"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/70 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div
+                            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-desktop-tower text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Enterprise Solutions</h3>
+                        <p class="text-white/80 mb-6 line-clamp-2">Technology implementation, software training, and
+                            digital solutions.</p>
+                        <a href="enterprise.html"
+                            class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-custom-pattern pointer-events-none z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
+                    <i class="ph ph-factory text-brand-gold"></i>
+                    Industries We Serve
+                </div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-secondary mb-4">
+                    Expertise Across Sectors
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We have extensive experience serving clients across a wide range of industries.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up">
+                    <i class="ph ph-factory text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">Manufacturing</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="50">
+                    <i class="ph ph-storefront text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">Trading</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ph ph-heart text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">NGOs</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="150">
+                    <i class="ph ph-first-aid text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">Healthcare</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ph ph-bank text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">Financial Services</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="250">
+                    <i class="ph ph-buildings text-4xl text-brand-primary mb-3"></i>
+                    <div class="font-semibold text-gray-800">Real Estate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 hero-gradient">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
+                Need Help Choosing the Right Service?
+            </h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Our team is ready to discuss your specific needs and recommend the best solutions for your business.
+            </p>
+            <a href="contact.html"
+                class="rhombus-primary px-8 py-4 font-bold text-lg hover:bg-white hover:text-brand-secondary transition-all glow-btn inline-flex items-center justify-center gap-2 rhombus-btn">
+                <span><i class="ph ph-chat-circle-dots"></i> Schedule a Consultation</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="assets/images/footerlogo.png" alt="PAD Consult" class="h-16 md:h-20 lg:h-24 w-auto mb-4">
+                    <p class="text-gray-400 leading-relaxed text-sm mb-4">Delivering high-quality audit, tax, and
+                        advisory
+                        services with a focus on building long-term relationships.</p>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Our Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="services/audit-accounting.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Audit & Accounting</a></li>
+                        <li><a href="services/tax-advisory.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Tax Advisory & Outsourcing</a></li>
+                        <li><a href="services/company-secretarial.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Company Secretarial Services</a></li>
+                        <li><a href="services/financial-management.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Financial Management & Consulting</a></li>
+                        <li><a href="services/business-planning.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Business Planning</a></li>
+                        <li><a href="enterprise.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Services</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i
+                                class="ph ph-map-pin text-brand-lightBlue text-lg mt-0.5"></i><span>MRQH+JGP, Ritz
+                                Junction,<br>Madina Adenta High Way, Accra</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-phone text-brand-lightBlue text-lg"></i><span>024 591 2363 / 055 316
+                                6043</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-envelope text-brand-lightBlue text-lg"></i><a
+                                href="mailto:padconsults@gmail.com"
+                                class="hover:text-brand-lightBlue transition-colors">padconsults@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="currentYear"></span> PAD Consult Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

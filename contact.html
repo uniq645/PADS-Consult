@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PAD Consult Services</title>
+    <meta name="description"
+        content="Get in touch with PAD Consult Services for all your audit, tax, and advisory needs. We're here to help your business grow.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#98fb98',   // Sage Green
+                            secondary: '#001f3f', // Navy Blue
+                            accent: '#add8e6',    // Light Blue
+                            darkBlue: '#262673',  // New Pill Background
+                            gold: '#999900',      // New Gold Icon/Pill Icon
+                            lightBlue: '#4dd2ff', // New Light Blue Accent
+                            neutral: '#f8f9fa'    // Off-White background
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+        }
+
+        .bg-pattern {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(#001f3f 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-attachment: fixed;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, #999900 0%, #cc9900 100%);
+        }
+
+        .service-icon.blue {
+            background: linear-gradient(135deg, #4dd2ff 0%, #00aaff 100%);
+        }
+
+        .service-icon.green {
+            background: linear-gradient(135deg, #98fb98 0%, #3cb371 100%);
+        }
+
+        /* Rhombus Buttons */
+        .rhombus-btn {
+            transform: skewX(-20deg);
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rhombus-btn>span {
+            transform: skewX(20deg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rhombus-primary {
+            background: #98fb98;
+            color: #001f3f;
+        }
+
+        .rhombus-primary:hover,
+        .rhombus-primary:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-primary:hover>span,
+        .rhombus-primary:active>span {
+            color: #ffffff;
+        }
+
+        .rhombus-secondary {
+            background: transparent;
+            border: 2px solid #001f3f;
+            color: #001f3f;
+        }
+
+        .rhombus-secondary:hover,
+        .rhombus-secondary:active {
+            background: #f8f9fa;
+            color: #001f3f;
+        }
+
+        .rhombus-navy {
+            background: #001f3f;
+            color: #ffffff;
+        }
+
+        .rhombus-navy:hover,
+        .rhombus-navy:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-navy:hover>span,
+        .rhombus-navy:active>span {
+            color: #ffffff;
+        }
+
+        .glow-btn {
+            box-shadow: 0 4px 15px rgba(152, 251, 152, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-pattern text-gray-800 font-sans" x-data="{ mobileMenuOpen: false }">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-1 flex justify-between items-center">
+            <a href="index.html" class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                <img src="assets/images/navlogo.png" alt="PAD Consult Services Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Home</a>
+                <a href="about.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">About
+                    Us</a>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">
+                        Services <i class="ph ph-caret-down text-sm"></i>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 w-72 bg-white shadow-2xl rounded-xl py-3 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 z-50 transform origin-top scale-95 group-hover:scale-100">
+                        <a href="services.html"
+                            class="block px-5 py-3 text-gray-700 hover:bg-brand-primary/5 hover:text-brand-primary font-medium transition-colors">
+                            <i class="ph ph-grid-four mr-2"></i> All Services
+                        </a>
+                        <div class="border-t border-gray-100 my-2"></div>
+                        <a href="services/audit-accounting.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Audit
+                            &
+                            Accounting</a>
+                        <a href="services/tax-advisory.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Tax
+                            Advisory & Outsourcing</a>
+                        <a href="services/company-secretarial.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Company
+                            Secretarial Services</a>
+                        <a href="services/financial-management.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Financial
+                            Management & Consulting</a>
+                        <a href="services/business-planning.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Business
+                            Planning</a>
+                    </div>
+                </div>
+                <a href="enterprise.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Enterprise
+                    Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary px-6 py-2.5 font-bold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 rhombus-btn glow-btn">
+                    <span>Get in touch</span>
+                </a>
+            </nav>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-brand-secondary text-3xl">
+                <i :class="mobileMenuOpen ? 'ph ph-x' : 'ph ph-list'"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition
+            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-brand-secondary font-medium text-lg py-2">Home</a>
+                <a href="about.html" class="text-brand-secondary font-medium text-lg py-2">About Us</a>
+                <a href="services.html" class="text-brand-secondary font-medium text-lg py-2">Services</a>
+                <a href="enterprise.html" class="text-brand-secondary font-medium text-lg py-2">Enterprise Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-2">
+                    <span>Contact Us</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm mb-6"
+                data-aos="fade-up">
+                <i class="ph ph-envelope text-brand-gold"></i>
+                <span>Get In Touch</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6" data-aos="fade-up"
+                data-aos-delay="100">
+                Contact <span class="text-brand-primary">Us</span>
+            </h1>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                We're ready to assist you with efficient and effective service delivery. Reach out to us today.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+                <!-- Contact Info -->
+                <div class="lg:w-1/2 flex flex-col justify-center" data-aos="fade-right">
+                    <h2 class="text-3xl font-heading font-bold text-brand-secondary mb-8">Get in Touch</h2>
+
+                    <div class="space-y-8">
+                        <!-- Location -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ph ph-map-pin text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Visit Our Office</h3>
+                                <p class="text-gray-600 leading-relaxed">MRQH+JGP, Ritz Junction,<br>Madina Adenta High
+                                    Way, Accra</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ph ph-phone text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Call Us</h3>
+                                <div class="space-y-3">
+                                    <a href="tel:0245912363"
+                                        class="flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors group">
+                                        <i
+                                            class="ph ph-phone-call text-brand-secondary group-hover:text-brand-primary transition-colors"></i>
+                                        <span>024 591 2363</span>
+                                    </a>
+                                    <a href="tel:0553166043"
+                                        class="flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors group">
+                                        <i
+                                            class="ph ph-phone-call text-brand-secondary group-hover:text-brand-primary transition-colors"></i>
+                                        <span>055 316 6043</span>
+                                    </a>
+                                    <a href="tel:0244347938"
+                                        class="flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors group">
+                                        <i
+                                            class="ph ph-phone-call text-brand-secondary group-hover:text-brand-primary transition-colors"></i>
+                                        <span>024 434 7938</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ph ph-envelope text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Email Us</h3>
+                                <div class="space-y-2">
+                                    <a href="mailto:padconsults@gmail.com"
+                                        class="block text-gray-600 hover:text-brand-primary transition-colors">
+                                        padconsults@gmail.com
+                                    </a>
+                                    <a href="mailto:padconsults@yahoo.com"
+                                        class="block text-gray-600 hover:text-brand-primary transition-colors">
+                                        padconsults@yahoo.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ph ph-clock text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Business Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 7:00 AM - 5:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:w-1/2 min-h-[450px] rounded-2xl overflow-hidden shadow-lg" data-aos="fade-left">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d127048.72404868764!2d-0.16290839999999998!3d5.67367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0xfdf9d5fe2c2bf39%3A0x7acea6f6d3d496f7!2sPAD%20Consults%20Service%2C%20MRQH%2BJGP%2C%20Ritz%20Junction%2C%20Madina%20Madina%20Adenta%20High%20Way%2C%20Madina!3m2!1d5.6890827999999996!2d-0.1711809!5e0!3m2!1sen!2sgh!4v1770628436374!5m2!1sen!2sgh"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-offWhite">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
+                    <i class="ph ph-question text-brand-gold"></i>
+                    Common Questions
+                </div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-secondary mb-4">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4" x-data="{ open: null }">
+                <div class="bg-white rounded-xl overflow-hidden" data-aos="fade-up">
+                    <button @click="open = open === 1 ? null : 1"
+                        class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-semibold text-gray-900">How do I schedule an initial consultation?</span>
+                        <i class="ph" :class="open === 1 ? 'ph-minus' : 'ph-plus'"></i>
+                    </button>
+                    <div x-show="open === 1" x-collapse class="px-6 pb-6 text-gray-600">
+                        You can schedule a consultation by filling out the contact form above, calling us directly, or
+                        sending an email. We typically respond within 24 hours and will arrange a convenient time for
+                        your initial meeting.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button @click="open = open === 2 ? null : 2"
+                        class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-semibold text-gray-900">What industries do you serve?</span>
+                        <i class="ph" :class="open === 2 ? 'ph-minus' : 'ph-plus'"></i>
+                    </button>
+                    <div x-show="open === 2" x-collapse class="px-6 pb-6 text-gray-600">
+                        We serve a wide range of industries including manufacturing, trading companies, NGOs,
+                        healthcare, financial services, real estate, and more. Our diverse experience allows us to
+                        understand the unique challenges of each sector.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button @click="open = open === 3 ? null : 3"
+                        class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-semibold text-gray-900">What are your fees for services?</span>
+                        <i class="ph" :class="open === 3 ? 'ph-minus' : 'ph-plus'"></i>
+                    </button>
+                    <div x-show="open === 3" x-collapse class="px-6 pb-6 text-gray-600">
+                        Our fees vary depending on the scope and complexity of the engagement. We provide transparent
+                        pricing and will discuss all costs during your initial consultation. We offer competitive rates
+                        while maintaining the highest quality standards.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button @click="open = open === 4 ? null : 4"
+                        class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-semibold text-gray-900">Do you offer remote services?</span>
+                        <i class="ph" :class="open === 4 ? 'ph-minus' : 'ph-plus'"></i>
+                    </button>
+                    <div x-show="open === 4" x-collapse class="px-6 pb-6 text-gray-600">
+                        Yes, we offer both in-person and remote services. Many of our clients prefer remote
+                        consultations and we have the technology infrastructure to provide seamless virtual meetings,
+                        document sharing, and ongoing support.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="assets/images/footerlogo.png" alt="PAD Consult" class="h-16 md:h-20 lg:h-24 w-auto mb-4">
+                    <p class="text-gray-400 leading-relaxed text-sm mb-4">Delivering high-quality audit, tax, and
+                        advisory
+                        services with a focus on building long-term relationships.</p>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Our Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="services/audit-accounting.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Audit & Accounting</a></li>
+                        <li><a href="services/tax-advisory.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Tax Advisory & Outsourcing</a></li>
+                        <li><a href="services/company-secretarial.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Company Secretarial Services</a></li>
+                        <li><a href="services/financial-management.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Financial Management & Consulting</a></li>
+                        <li><a href="services/business-planning.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Business Planning</a></li>
+                        <li><a href="enterprise.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Services</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i
+                                class="ph ph-map-pin text-brand-lightBlue text-lg mt-0.5"></i><span>MRQH+JGP, Ritz
+                                Junction,<br>Madina Adenta High Way, Accra</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-phone text-brand-lightBlue text-lg"></i><span>024 591 2363 / 055 316
+                                6043</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-envelope text-brand-lightBlue text-lg"></i><a
+                                href="mailto:padconsults@gmail.com"
+                                class="hover:text-brand-lightBlue transition-colors">padconsults@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="currentYear"></span> PAD Consult Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

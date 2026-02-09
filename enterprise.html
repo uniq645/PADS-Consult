@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Solutions | PAD Consult Services</title>
+    <meta name="description"
+        content="Modernize your financial infrastructure with our enterprise software solutions including Sage, QuickBooks, Tally, and custom development support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#98fb98',   // Sage Green
+                            secondary: '#001f3f', // Navy Blue
+                            accent: '#add8e6',    // Light Blue
+                            darkBlue: '#262673',  // New Pill Background
+                            gold: '#999900',      // New Gold Icon/Pill Icon
+                            lightBlue: '#4dd2ff', // New Light Blue Accent
+                            neutral: '#f8f9fa'    // Off-White background
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+        }
+
+        .bg-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Cpath fill='%23d1d9f2' fill-opacity='0.4' d='M0 85.02l4.62-4.27a49.09 49.09 0 0 0 7.33 3.74l-1.2 10.24 2.66.87 5.05-9c2.62.65 5.34 1.08 8.12 1.28L28.6 98h2.8l2.02-10.12c2.74-.2 5.46-.62 8.12-1.28l5.05 8.99 2.66-.86-1.2-10.24c2.55-1.03 5-2.29 7.33-3.74l7.58 7 2.26-1.65-4.3-9.38a48.3 48.3 0 0 0 5.8-5.8l9.38 4.3 1.65-2.26-7-7.58a49.09 49.09 0 0 0 3.74-7.33l10.24 1.2.87-2.66-9-5.05a48.07 48.07 0 0 0 1.28-8.12L88 41.4v-2.8l-10.12-2.02c-.2-2.74-.62-5.46-1.28-8.12l8.99-5.05-.86-2.66-10.24 1.2c-1.03-2.55-2.29-5-3.74-7.33l7-7.58-1.65-2.26-9.38 4.3a48.3 48.3 0 0 0-5.8-5.8L62.42 0h2.16l-1.25 2.72a50.31 50.31 0 0 1 3.95 3.95l9.5-4.36 3.52 4.85-7.08 7.68c.94 1.6 1.79 3.27 2.54 4.98l10.38-1.21 1.85 5.7-9.11 5.12c.39 1.8.68 3.65.87 5.52L90 37v6l-10.25 2.05a49.9 49.9 0 0 1-.87 5.52l9.11 5.12-1.85 5.7-10.38-1.21c-.75 1.7-1.6 3.37-2.54 4.98l7.08 7.68-3.52 4.85-9.5-4.36a50.31 50.31 0 0 1-3.95 3.95l4.36 9.5-4.85 3.52-7.68-7.08c-1.6.94-3.27 1.79-4.98 2.54l1.21 10.38-5.7 1.85-5.12-9.11c-1.8.39-3.65.68-5.52.87L33 100h-6l-2.05-10.25a49.9 49.9 0 0 1-5.52-.87l-5.12 9.11-5.7-1.85 1.21-10.38c-1.7-.75-3.37-1.6-4.98-2.54L0 87.68v-2.66zM0 52.7V27.3l8.38 4.84a22.96 22.96 0 0 0 0 15.72L0 52.7zm0-39.16A39.91 39.91 0 0 1 26 .2v17.15a22.98 22.98 0 0 0-13.62 7.86L0 18.06v-4.52zm0 52.92v-4.52l12.38-7.15A22.98 22.98 0 0 0 26 62.65V79.8A39.91 39.91 0 0 1 0 66.46zM34 79.8V62.65a22.98 22.98 0 0 0 13.62-7.86l14.85 8.58A39.97 39.97 0 0 1 34 79.8zm32.48-23.36l-14.86-8.58a22.96 22.96 0 0 0 0-15.72l14.86-8.58A39.86 39.86 0 0 1 70 40a39.9 39.9 0 0 1-3.52 16.44zm-4.01-39.8L47.62 25.2A22.98 22.98 0 0 0 34 17.35V.2a39.97 39.97 0 0 1 28.47 16.43v.01zM0 50.38l5.98-3.45a25.01 25.01 0 0 1 0-13.88L0 29.6v20.78zm.5-34.35l11.48 6.63c3.27-3.4 7.44-5.8 12.02-6.94V2.47A37.96 37.96 0 0 0 .5 16.04v-.01zm0 47.92A37.96 37.96 0 0 0 24 77.53V64.28a24.97 24.97 0 0 1-12.02-6.95L.5 63.96v-.01zM36 77.53a37.96 37.96 0 0 0 23.5-13.57l-11.48-6.63A24.97 24.97 0 0 1 36 64.28v13.25zm29.5-23.96a37.91 37.91 0 0 0 0-27.14l-11.48 6.63a25.01 25.01 0 0 1 0 13.88l11.49 6.63h-.01zm-6-37.53A37.96 37.96 0 0 0 36 2.47v13.25c4.66 1.15 8.8 3.6 12.02 6.95l11.48-6.63zM30 54a14 14 0 1 1 0-28 14 14 0 0 1 0 28zm0-2a12 12 0 1 0 0-24 12 12 0 0 0 0 24zm0-2a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z'%3E%3C/path%3E%3C/svg%3E");
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, #999900 0%, #cc9900 100%);
+        }
+
+        .service-icon.blue {
+            background: linear-gradient(135deg, #4dd2ff 0%, #00aaff 100%);
+        }
+
+        .service-icon.green {
+            background: linear-gradient(135deg, #98fb98 0%, #3cb371 100%);
+        }
+
+        /* Rhombus Buttons */
+        .rhombus-btn {
+            transform: skewX(-20deg);
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rhombus-btn>span {
+            transform: skewX(20deg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rhombus-primary {
+            background: #98fb98;
+            color: #001f3f;
+        }
+
+        .rhombus-primary:hover,
+        .rhombus-primary:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-primary:hover>span,
+        .rhombus-primary:active>span {
+            color: #ffffff;
+        }
+
+        .rhombus-secondary {
+            background: transparent;
+            border: 2px solid #001f3f;
+            color: #001f3f;
+        }
+
+        .rhombus-secondary:hover,
+        .rhombus-secondary:active {
+            background: #f8f9fa;
+            color: #001f3f;
+        }
+
+        .rhombus-navy {
+            background: #001f3f;
+            color: #ffffff;
+        }
+
+        .rhombus-navy:hover,
+        .rhombus-navy:active {
+            background: #262673;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(38, 38, 115, 0.5);
+        }
+
+        .rhombus-navy:hover>span,
+        .rhombus-navy:active>span {
+            color: #ffffff;
+        }
+
+        .glow-btn {
+            box-shadow: 0 4px 15px rgba(152, 251, 152, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-pattern text-gray-800 font-sans" x-data="{ mobileMenuOpen: false }">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-1 flex justify-between items-center">
+            <a href="index.html" class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                <img src="assets/images/navlogo.png" alt="PAD Consult Services Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Home</a>
+                <a href="about.html"
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">About
+                    Us</a>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">
+                        Services <i class="ph ph-caret-down text-sm"></i>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 w-72 bg-white shadow-2xl rounded-xl py-3 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 z-50 transform origin-top scale-95 group-hover:scale-100">
+                        <a href="services.html"
+                            class="block px-5 py-3 text-gray-700 hover:bg-brand-primary/5 hover:text-brand-primary font-medium transition-colors">
+                            <i class="ph ph-grid-four mr-2"></i> All Services
+                        </a>
+                        <div class="border-t border-gray-100 my-2"></div>
+                        <a href="services/audit-accounting.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Audit
+                            &
+                            Accounting</a>
+                        <a href="services/tax-advisory.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Tax
+                            Advisory & Outsourcing</a>
+                        <a href="services/company-secretarial.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Company
+                            Secretarial Services</a>
+                        <a href="services/financial-management.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Financial
+                            Management & Consulting</a>
+                        <a href="services/business-planning.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Business
+                            Planning</a>
+                    </div>
+                </div>
+                <a href="enterprise.html"
+                    class="text-brand-secondary font-bold px-4 py-2 rounded-lg bg-brand-primary/10 transition-all duration-300 transform scale-105">Enterprise
+                    Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary px-6 py-2.5 font-bold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 rhombus-btn glow-btn">
+                    <span>Get in touch</span>
+                </a>
+            </nav>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-brand-secondary text-3xl">
+                <i :class="mobileMenuOpen ? 'ph ph-x' : 'ph ph-list'"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition
+            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html" class="text-brand-secondary font-medium text-lg py-2">Home</a>
+                <a href="about.html" class="text-brand-secondary font-medium text-lg py-2">About Us</a>
+                <a href="services.html" class="text-brand-secondary font-medium text-lg py-2">Services</a>
+                <a href="enterprise.html" class="text-brand-primary font-semibold text-lg py-2">Enterprise Solutions</a>
+                <a href="contact.html"
+                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-2">
+                    <span>Contact Us</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-offWhite pt-32 pb-20 border-b border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm font-medium mb-6"
+                data-aos="fade-up">
+                <i class="ph ph-desktop-tower text-brand-gold"></i>
+                <span>Technology Solutions</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-secondary mb-6"
+                data-aos="fade-up" data-aos-delay="100">
+                Enterprise <span class="text-brand-primary">Solutions</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Modernize your financial infrastructure with industry-leading accounting software and custom development
+                support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Software Solutions -->
+    <section class="py-24 bg-brand-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
+                    <i class="ph ph-package text-brand-primary"></i>
+                    Accounting Software
+                </div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Software Installation & Training
+                </h2>
+                <p class="text-white/70 max-w-2xl mx-auto">
+                    We install and train clients for the effective usage of leading accounting software solutions to
+                    streamline your financial operations.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Tally -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center card-hover border border-white/20"
+                    data-aos="fade-up">
+                    <div
+                        class="w-20 h-20 bg-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-brand-secondary font-heading font-bold text-3xl">T</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-3">Tally</h3>
+                    <p class="text-white/70 text-sm mb-4">Powerful ERP software for complete business management and
+                        financial control.</p>
+                    <ul class="text-left text-sm text-white/80 space-y-2">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> ERP
+                            Implementation
+                        </li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Customization
+                        </li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Integration
+                            Support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sage -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center card-hover border border-white/20"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <img src="https://cdn.simpleicons.org/sage/00B140" class="w-12 h-12" alt="Sage">
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-3">Sage</h3>
+                    <p class="text-white/70 text-sm mb-4">Comprehensive business management and accounting software for
+                        growing enterprises.</p>
+                    <ul class="text-left text-sm text-white/80 space-y-2">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Installation
+                            & Setup
+                        </li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Staff
+                            Training</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Ongoing
+                            Support</li>
+                    </ul>
+                </div>
+
+                <!-- QuickBooks -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center card-hover border border-white/20"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <img src="https://cdn.simpleicons.org/quickbooks/2CA01C" class="w-12 h-12" alt="QuickBooks">
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-3">QuickBooks</h3>
+                    <p class="text-white/70 text-sm mb-4">Smart, intuitive accounting software perfect for small to
+                        medium businesses.</p>
+                    <ul class="text-left text-sm text-white/80 space-y-2">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Cloud &
+                            Desktop
+                            Setup</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Data
+                            Migration</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> User Training
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Peachtree -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center card-hover border border-white/20"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 bg-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-brand-secondary font-heading font-bold text-3xl">P</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-3">Peachtree</h3>
+                    <p class="text-white/70 text-sm mb-4">Robust accounting solution for businesses requiring advanced
+                        financial tools.</p>
+                    <ul class="text-left text-sm text-white/80 space-y-2">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Full
+                            Installation
+                        </li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Report
+                            Customization
+                        </li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-primary"></i> Technical
+                            Support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Benefits Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 bg-brand-darkBlue px-4 py-2 rounded-full text-white text-sm font-medium mb-6">
+                        <i class="ph ph-graduation-cap text-brand-gold"></i>
+                        Why Training Matters
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-secondary mb-6">
+                        Benefits of Professional Software Training
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Investing in professional software training ensures your team can leverage the full potential of
+                        your accounting systems, leading to improved efficiency and accuracy.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="ph ph-rocket-launch text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-secondary mb-1">Increased Productivity</h4>
+                                <p class="text-gray-600 text-sm">Trained staff work faster and more efficiently,
+                                    reducing time spent on routine tasks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="ph ph-shield-check text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-secondary mb-1">Reduced Errors</h4>
+                                <p class="text-gray-600 text-sm">Proper training minimizes costly mistakes in data entry
+                                    and financial reporting.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="ph ph-chart-line-up text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-secondary mb-1">Better Decision Making</h4>
+                                <p class="text-gray-600 text-sm">Understanding software features enables better
+                                    financial insights and business decisions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="ph ph-users text-2xl text-brand-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-secondary mb-1">Team Confidence</h4>
+                                <p class="text-gray-600 text-sm">Employees feel empowered and confident when using
+                                    software they understand thoroughly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Software training session" class="rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 hero-gradient">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
+                Ready to Upgrade Your Financial Systems?
+            </h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Let's discuss the best software solution for your business. Contact us for a free consultation.
+            </p>
+            <a href="contact.html"
+                class="rhombus-primary px-8 py-4 font-bold text-lg hover:bg-brand-accent hover:text-white transition-all glow-btn inline-flex items-center justify-center gap-2 rhombus-btn">
+                <span><i class="ph ph-chat-circle-dots"></i> Get Started Today</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="assets/images/footerlogo.png" alt="PAD Consult" class="h-16 md:h-20 lg:h-24 w-auto mb-4">
+                    <p class="text-gray-400 leading-relaxed text-sm mb-4">Delivering high-quality audit, tax, and
+                        advisory
+                        services with a focus on building long-term relationships.</p>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-lightBlue transition-colors"><i
+                                class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Our Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="services/audit-accounting.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Audit & Accounting</a></li>
+                        <li><a href="services/tax-advisory.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Tax Advisory & Outsourcing</a></li>
+                        <li><a href="services/company-secretarial.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Company Secretarial Services</a></li>
+                        <li><a href="services/financial-management.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Financial Management & Consulting</a></li>
+                        <li><a href="services/business-planning.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Business Planning</a></li>
+                        <li><a href="enterprise.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Services</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-gold">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i
+                                class="ph ph-map-pin text-brand-lightBlue text-lg mt-0.5"></i><span>MRQH+JGP, Ritz
+                                Junction,<br>Madina Adenta High Way, Accra</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-phone text-brand-lightBlue text-lg"></i><span>024 591 2363 / 055 316
+                                6043</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-envelope text-brand-lightBlue text-lg"></i><a
+                                href="mailto:padconsults@gmail.com"
+                                class="hover:text-brand-lightBlue transition-colors">padconsults@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="currentYear"></span> PAD Consult Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

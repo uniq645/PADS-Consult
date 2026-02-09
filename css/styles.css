@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap');
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Tailwind utility classes if needed, though most can be done via CDN config in HTML head */
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.text-deep-navy {
+  color: #1B263B;
+}
+
+.bg-deep-navy {
+  background-color: #1B263B;
+}
+
+.text-sage {
+  color: #9CADCE;
+  /* Adjusted sage based on user request "Light Sage Green", close to Slate/Blue-ish. Or #B7E4C7. Let's stick to a variable. */
+}
+
+/* Re-defining sage more specifically as a class for clarity */
+.bg-sage-light {
+  background-color: #E8F3E8;
+  /* Very light sage background */
+}
+
+/* Swiper custom pagination color */
+:root {
+  --swiper-theme-color: #1B263B;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
