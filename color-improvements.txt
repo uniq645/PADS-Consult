@@ -59,5 +59,20 @@ Use **brand-secondary (Navy)** for the navigation and footer backgrounds. All ma
 
 ### Contact Info Sync
 
-Ensure your footer (Navy background) displays the contact details from the banner in **White** and **Light Blue** for maximum readability:
+Ensure your footer (Navy background) displays the contact details from the banner in **White** and **Light Blue** 
 
+
+for maximum readability:
+
+
+
+lets make some updates
+1. on footer: maintain 0245912363, add following changes;
+055 274 4179
+024 166 2867
+054 236 5050 use to replace  0553166043
+update accordingly for @beautifulMention and @beautifulMention
+remove info for Daniel Domaka. 
+add Winnie Anani. 
+
+2. 

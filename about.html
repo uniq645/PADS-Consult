@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,6 +40,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <style>
         .hero-gradient {
@@ -189,11 +190,14 @@
                         <a href="services/business-planning.html"
                             class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Business
                             Planning</a>
+                        <a href="services/capacity-building.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Organizational
+                            Capacity Building</a>
                     </div>
                 </div>
                 <a href="enterprise.html"
-                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Enterprise
-                    Solutions</a>
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-lightBlue/10 hover:text-brand-lightBlue hover:scale-105 active:scale-95 transition-all duration-300">Software
+                    Training</a>
                 <a href="contact.html"
                     class="rhombus-primary px-6 py-2.5 font-bold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 rhombus-btn glow-btn">
                     <span>Get in touch</span>
@@ -204,14 +208,46 @@
             </button>
         </div>
         <div x-show="mobileMenuOpen" x-cloak x-transition
-            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6">
+            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6 h-[calc(100vh-80px)] overflow-y-auto pb-32">
             <nav class="flex flex-col gap-4">
-                <a href="index.html" class="text-brand-secondary font-medium text-lg py-2">Home</a>
-                <a href="about.html" class="text-brand-primary font-semibold text-lg py-2">About Us</a>
-                <a href="services.html" class="text-brand-secondary font-medium text-lg py-2">Services</a>
-                <a href="enterprise.html" class="text-brand-secondary font-medium text-lg py-2">Enterprise Solutions</a>
+                <a href="index.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">Home</a>
+                <a href="about.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">About Us</a>
+
+                <!-- Services Dropdown -->
+                <div x-data="{ expanded: false }" class="border-b border-gray-100 pb-2">
+                    <button @click="expanded = !expanded"
+                        class="flex items-center justify-between w-full text-brand-secondary font-medium text-lg py-2">
+                        <span>Services</span>
+                        <i :class="expanded ? 'ph-caret-up' : 'ph-caret-down'" class="ph text-brand-primary"></i>
+                    </button>
+                    <div x-show="expanded" x-collapse class="flex flex-col gap-2 pl-4 mt-2 bg-gray-50 rounded-lg p-2">
+                        <a href="services.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-base flex items-center gap-2 font-medium">
+                            <i class="ph ph-grid-four"></i> All Services
+                        </a>
+                        <a href="services/audit-accounting.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Audit & Accounting</a>
+                        <a href="services/tax-advisory.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Tax Advisory & Outsourcing</a>
+                        <a href="services/company-secretarial.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Company Secretarial Services</a>
+                        <a href="services/financial-management.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Financial Management &
+                            Consulting</a>
+                        <a href="services/business-planning.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Business Planning</a>
+                        <a href="services/capacity-building.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Organizational Capacity
+                            Building</a>
+                    </div>
+                </div>
+
+                <a href="enterprise.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">Software Training</a>
                 <a href="contact.html"
-                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-2">
+                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-4">
                     <span>Contact Us</span>
                 </a>
             </nav>
@@ -258,7 +294,7 @@
                         We are a dynamic knowledge driven public accounting firm serving local and international
                         clients. We are committed to knowledge and best practice and we ensure efficient and effective
                         services delivery to all our clients with client success central to our business approach. At
-                        PAD Consult Services we fulfil clients’ needs from concept to completion.
+                        PAD Consult Services we fulfil clientsâ€™ needs from concept to completion.
                     </p>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         We serve growth-oriented owner-managed businesses with expanding local and international
@@ -298,7 +334,7 @@
                         services at affordable costs.
                     </p>
                     <p class="text-white/80 leading-relaxed mt-4">
-                        We focus on how to add value to our client’s businesses by bringing together, to each
+                        We focus on how to add value to our clientâ€™s businesses by bringing together, to each
                         assignment, a great array of expertise from our skilled professionals. We are dedicated to the
                         provision of quality and timely services to meet client satisfaction.
                     </p>
@@ -388,9 +424,8 @@
                 <!-- Team Member 1 -->
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center"
                     data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Paul Nii Anang Boye"
-                        class="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-brand-primary">
+                    <img src="assets/images/ceo.jpeg" alt="Paul Nii Anang Boye"
+                        class="w-48 h-48 rounded-2xl object-cover mx-auto mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
                     <h3 class="text-xl font-heading font-bold text-white mb-2">Paul Nii Anang Boye</h3>
                     <p class="text-brand-primary font-medium text-sm mb-2">ICA (Gh), MBA, CE (Gh), CICTA (Gh), PMP,
                         ACMA, CGMA</p>
@@ -405,7 +440,7 @@
                     data-aos="fade-up" data-aos-delay="100">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="Clifford Boafo"
-                        class="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-brand-primary">
+                        class="w-48 h-48 rounded-2xl object-cover mx-auto mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
                     <h3 class="text-xl font-heading font-bold text-white mb-2">Clifford Boafo</h3>
                     <p class="text-brand-primary font-medium text-sm mb-2">BSc (Accounting), MBA (Fin), FCCA, CA (Gh)
                     </p>
@@ -418,15 +453,14 @@
                 <!-- Team Member 3 -->
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center"
                     data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Daniel Domaka"
-                        class="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-brand-primary">
-                    <h3 class="text-xl font-heading font-bold text-white mb-2">Daniel Domaka</h3>
-                    <p class="text-brand-primary font-medium text-sm mb-2">HND Accountancy, ICA (Gh)</p>
-                    <p class="text-white/70 text-sm mb-4">9 years of experience</p>
-                    <a href="tel:0553166043"
+                    <img src="assets/images/sec.jpeg" alt="Winnie Anani"
+                        class="w-48 h-48 rounded-2xl object-cover mx-auto mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-heading font-bold text-white mb-2">Winnie Anani</h3>
+                    <p class="text-brand-primary font-medium text-sm mb-2">Company Secretary</p>
+                    <p class="text-white/70 text-sm mb-4">Secretarial Services</p>
+                    <a href="tel:0542365050"
                         class="inline-flex items-center gap-2 text-white/90 hover:text-brand-primary transition-colors text-sm border border-white/20 rounded-full px-4 py-1">
-                        <i class="ph ph-phone"></i> 055-316-6043
+                        <i class="ph ph-phone"></i> 054-236-5050
                     </a>
                 </div>
             </div>
@@ -508,9 +542,9 @@
                         <li><a href="services/business-planning.html"
                                 class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
                                     class="ph ph-caret-right text-xs"></i>Business Planning</a></li>
-                        <li><a href="enterprise.html"
+                        <li><a href="services/capacity-building.html"
                                 class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
-                                    class="ph ph-caret-right text-xs"></i>Enterprise Solutions</a></li>
+                                    class="ph ph-caret-right text-xs"></i>Organizational Capacity Building</a></li>
                     </ul>
                 </div>
                 <div>
@@ -525,6 +559,9 @@
                         <li><a href="services.html"
                                 class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
                                     class="ph ph-caret-right text-xs"></i>Services</a></li>
+                        <li><a href="enterprise.html"
+                                class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
+                                    class="ph ph-caret-right text-xs"></i>Software Training</a></li>
                         <li><a href="contact.html"
                                 class="hover:text-brand-lightBlue transition-colors flex items-center gap-2"><i
                                     class="ph ph-caret-right text-xs"></i>Contact</a></li>
@@ -536,9 +573,20 @@
                         <li class="flex items-start gap-3"><i
                                 class="ph ph-map-pin text-brand-lightBlue text-lg mt-0.5"></i><span>MRQH+JGP, Ritz
                                 Junction,<br>Madina Adenta High Way, Accra</span></li>
-                        <li class="flex items-center gap-3"><i
-                                class="ph ph-phone text-brand-lightBlue text-lg"></i><span>024 591
-                                2363 / 055 316 6043</span></li>
+                        <li class="flex flex-col gap-1" x-data="{ expanded: false }">
+                            <div class="flex items-center gap-3">
+                                <i class="ph ph-phone text-brand-lightBlue text-lg"></i>
+                                <span>024 591 2363 / 055 274 4179</span>
+                                <button @click="expanded = !expanded"
+                                    class="hover:text-brand-lightBlue transition-colors focus:outline-none"
+                                    aria-label="Toggle more phone numbers">
+                                    <i class="ph" :class="expanded ? 'ph-caret-up' : 'ph-caret-down'"></i>
+                                </button>
+                            </div>
+                            <div x-show="expanded" x-collapse class="pl-8 text-gray-400 text-sm">
+                                <span>024 166 2867 / 054 236 5050</span>
+                            </div>
+                        </li>
                         <li class="flex items-center gap-3"><i
                                 class="ph ph-envelope text-brand-lightBlue text-lg"></i><a
                                 href="mailto:padconsults@gmail.com"

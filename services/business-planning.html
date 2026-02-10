@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,6 +39,7 @@
     </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <style>
         .hero-gradient {
@@ -174,11 +175,14 @@
                         <a href="business-planning.html"
                             class="block px-5 py-2.5 text-brand-primary font-semibold bg-brand-primary/5">Business
                             Planning</a>
+                        <a href="capacity-building.html"
+                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Organizational
+                            Capacity Building</a>
                     </div>
                 </div>
                 <a href="../enterprise.html"
-                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-primary/5 hover:text-brand-primary hover:scale-105 active:scale-95 transition-all duration-300">Enterprise
-                    Solutions</a>
+                    class="text-brand-secondary font-medium px-4 py-2 rounded-lg hover:bg-brand-primary/5 hover:text-brand-primary hover:scale-105 active:scale-95 transition-all duration-300">Software
+                    Training</a>
                 <a href="../contact.html"
                     class="rhombus-primary px-6 py-2.5 font-bold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 rhombus-btn glow-btn">
                     <span>Get in touch</span>
@@ -188,15 +192,46 @@
                     :class="mobileMenuOpen ? 'ph ph-x' : 'ph ph-list'"></i></button>
         </div>
         <div x-show="mobileMenuOpen" x-cloak x-transition
-            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6">
+            class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6 h-[calc(100vh-80px)] overflow-y-auto pb-32">
             <nav class="flex flex-col gap-4">
-                <a href="../index.html" class="text-brand-secondary font-medium text-lg py-2">Home</a>
-                <a href="../about.html" class="text-brand-secondary font-medium text-lg py-2">About Us</a>
-                <a href="../services.html" class="text-brand-primary font-semibold text-lg py-2">Services</a>
-                <a href="../enterprise.html" class="text-brand-secondary font-medium text-lg py-2">Enterprise
-                    Solutions</a>
+                <a href="../index.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">Home</a>
+                <a href="../about.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">About Us</a>
+
+                <!-- Services Dropdown -->
+                <div x-data="{ expanded: false }" class="border-b border-gray-100 pb-2">
+                    <button @click="expanded = !expanded"
+                        class="flex items-center justify-between w-full text-brand-secondary font-medium text-lg py-2">
+                        <span>Services</span>
+                        <i :class="expanded ? 'ph-caret-up' : 'ph-caret-down'" class="ph text-brand-primary"></i>
+                    </button>
+                    <div x-show="expanded" x-collapse class="flex flex-col gap-2 pl-4 mt-2 bg-gray-50 rounded-lg p-2">
+                        <a href="../services.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-base flex items-center gap-2 font-medium">
+                            <i class="ph ph-grid-four"></i> All Services
+                        </a>
+                        <a href="audit-accounting.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Audit & Accounting</a>
+                        <a href="tax-advisory.html" class="text-gray-600 hover:text-brand-primary py-2 text-sm">Tax
+                            Advisory & Outsourcing</a>
+                        <a href="company-secretarial.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Company Secretarial Services</a>
+                        <a href="financial-management.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Financial Management &
+                            Consulting</a>
+                        <a href="business-planning.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Business Planning</a>
+                        <a href="capacity-building.html"
+                            class="text-gray-600 hover:text-brand-primary py-2 text-sm">Organizational Capacity
+                            Building</a>
+                    </div>
+                </div>
+
+                <a href="../enterprise.html"
+                    class="text-brand-secondary font-medium text-lg py-2 border-b border-gray-100">Software Training</a>
                 <a href="../contact.html"
-                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-2">
+                    class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn mt-4">
                     <span>Contact Us</span>
                 </a>
             </nav>
@@ -335,9 +370,9 @@
                                 <li><a href="financial-management.html"
                                         class="flex items-center gap-2 text-gray-600 hover:text-brand-primary transition-colors"><i
                                             class="ph ph-arrow-right"></i> Financial Management & Consulting</a></li>
-                                <li><a href="../enterprise.html"
+                                <li><a href="capacity-building.html"
                                         class="flex items-center gap-2 text-gray-600 hover:text-brand-primary transition-colors"><i
-                                            class="ph ph-arrow-right"></i> Enterprise Solutions</a></li>
+                                            class="ph ph-arrow-right"></i> Organizational Capacity Building</a></li>
                             </ul>
                         </div>
                     </div>
@@ -366,7 +401,8 @@
                         <li><a href="financial-management.html" class="hover:text-brand-accent">Financial Management &
                                 Consulting</a></li>
                         <li><a href="business-planning.html" class="hover:text-brand-accent">Business Planning</a></li>
-                        <li><a href="../enterprise.html" class="hover:text-brand-accent">Enterprise Solutions</a></li>
+                        <li><a href="capacity-building.html" class="hover:text-brand-accent">Organizational Capacity
+                                Building</a></li>
                     </ul>
                 </div>
                 <div>
@@ -374,6 +410,7 @@
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="../index.html" class="hover:text-brand-accent">Home</a></li>
                         <li><a href="../about.html" class="hover:text-brand-accent">About Us</a></li>
+                        <li><a href="../enterprise.html" class="hover:text-brand-accent">Software Training</a></li>
                         <li><a href="../contact.html" class="hover:text-brand-accent">Contact</a></li>
                     </ul>
                 </div>

@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Secretarial Services | PAD Consult Services</title>
+    <title>Organizational Capacity Building | PAD Consult Services</title>
     <meta name="description"
-        content="Company secretarial services including company registration, statutory filings, and corporate governance.">
+        content="Empowering your workforce and strengthening institutional capabilities through targeted training and development programs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -129,15 +131,11 @@
         .glow-btn {
             box-shadow: 0 4px 15px rgba(152, 251, 152, 0.4);
         }
-
-        .bg-custom-pattern {
-            background-color: #ffffff;
-            background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#e0eaed55, #e0eaed);
-        }
     </style>
 </head>
 
-<body class="bg-pattern text-gray-800 font-sans" x-data="{mobileMenuOpen:false}">
+<body class="bg-pattern text-gray-800 font-sans" x-data="{ mobileMenuOpen: false }">
+    <!-- Header -->
     <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="container mx-auto px-6 py-1 flex justify-between items-center">
             <a href="../index.html"
@@ -164,8 +162,7 @@
                         <div class="border-t border-gray-100 my-2"></div>
                         <a href="audit-accounting.html"
                             class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Audit
-                            &
-                            Accounting</a>
+                            & Accounting</a>
                         <a href="tax-advisory.html"
                             class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Tax
                             Advisory & Outsourcing</a>
@@ -179,7 +176,7 @@
                             class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Business
                             Planning</a>
                         <a href="capacity-building.html"
-                            class="block px-5 py-2.5 text-gray-600 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors">Organizational
+                            class="block px-5 py-2.5 text-brand-primary font-semibold bg-brand-primary/5">Organizational
                             Capacity Building</a>
                     </div>
                 </div>
@@ -191,8 +188,8 @@
                     <span>Get in touch</span>
                 </a>
             </nav>
-            <button @click="mobileMenuOpen=!mobileMenuOpen" class="lg:hidden text-brand-secondary text-3xl"><i
-                    :class="mobileMenuOpen?'ph ph-x':'ph ph-list'"></i></button>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-brand-secondary text-3xl"><i
+                    :class="mobileMenuOpen ? 'ph ph-x' : 'ph ph-list'"></i></button>
         </div>
         <div x-show="mobileMenuOpen" x-cloak x-transition
             class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-6 px-6 h-[calc(100vh-80px)] overflow-y-auto pb-32">
@@ -241,111 +238,119 @@
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero-gradient pt-32 pb-20">
         <div class="container mx-auto px-6">
-            <div class="flex items-center gap-2 text-white/70 text-sm mb-4"><a href="../services.html"
-                    class="hover:text-white">Services</a><i class="ph ph-caret-right"></i><span
-                    class="text-white">Company Secretarial Services</span></div>
-            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Company Secretarial <span
-                    class="text-brand-accent">Services</span></h1>
-            <p class="text-xl text-white/80 max-w-3xl">Complete corporate governance and compliance services for your
-                business.</p>
+            <div class="flex items-center gap-2 text-white/70 text-sm mb-4" data-aos="fade-up">
+                <a href="../services.html" class="hover:text-white">Services</a>
+                <i class="ph ph-caret-right"></i>
+                <span class="text-white">Organizational Capacity Building</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6" data-aos="fade-up"
+                data-aos-delay="100">
+                Organizational <span class="text-brand-accent">Capacity Building</span>
+            </h1>
+            <p class="text-xl text-white/80 max-w-3xl" data-aos="fade-up" data-aos-delay="200">
+                Helping businesses and institutions build resilience, enhance skills, and improve operational efficiency
+                for sustainable growth.
+            </p>
         </div>
     </section>
 
+    <!-- Content -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
                 <div class="lg:w-2/3">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1000"
-                        alt="Company secretarial" class="w-full h-80 object-cover rounded-2xl mb-8">
+                    <img src="../assets/images/Capacity.webp" alt="Organizational Capacity Building"
+                        class="w-full h-80 object-cover rounded-2xl mb-8" data-aos="fade-up">
 
-                    <h2 class="text-3xl font-heading font-bold text-brand-secondary mb-6">Company Secretarial Services
+                    <h2 class="text-3xl font-heading font-bold text-brand-secondary mb-6" data-aos="fade-up">Overview
                     </h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        Running a business in Ghana comes with regulatory obligations that demand attention to detail
-                        and timely action. Our company secretarial services take the burden of compliance off your
-                        shoulders, ensuring your business stays in good standing with the Registrar General's
-                        Department and other regulatory bodies.
+                    <p class="text-gray-600 leading-relaxed mb-6" data-aos="fade-up">
+                        Building a resilient and capable organization is crucial for long-term success. Our
+                        Organizational Capacity Building services are designed to enhance the skills, knowledge, and
+                        operational efficiency of your team and institution.
                     </p>
-                    <p class="text-gray-600 leading-relaxed mb-8">
-                        <strong class="text-brand-secondary">Our services include provision of:</strong>
+                    <p class="text-gray-600 leading-relaxed mb-8" data-aos="fade-up">
+                        We provide targeted training programs, workshops, and strategic support to help you navigate
+                        challenges, adapt to change, and maximize your potential. From leadership development to
+                        technical skills training, we ensure your organization is equipped for the future.
                     </p>
 
-                    <div class="grid md:grid-cols-2 gap-4 mb-10">
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Investment advisory services</span>
-                                <p class="text-gray-500 text-sm mt-1">Strategic guidance to help you make informed
-                                    investment decisions.</p>
+                    <h3 class="text-2xl font-heading font-bold text-brand-secondary mb-6" data-aos="fade-up">Our
+                        Services Include</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-offWhite p-6 rounded-xl" data-aos="fade-up">
+                            <div class="w-12 h-12 service-icon rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph ph-chalkboard-teacher text-2xl text-white"></i>
                             </div>
+                            <h4 class="font-bold text-brand-secondary mb-2">Skills Development</h4>
+                            <p class="text-gray-600 text-sm">Comprehensive training programs covering both technical and
+                                soft skills to enhance employee performance.</p>
                         </div>
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Registration of business and associated
-                                    services</span>
-                                <p class="text-gray-500 text-sm mt-1">End-to-end support for company incorporation and
-                                    business name registration.</p>
+                        <div class="bg-offWhite p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-12 h-12 service-icon rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph ph-users-three text-2xl text-white"></i>
                             </div>
+                            <h4 class="font-bold text-brand-secondary mb-2">Leadership Workshops</h4>
+                            <p class="text-gray-600 text-sm">Interactive workshops designed to cultivate effective
+                                leadership and management capabilities.</p>
                         </div>
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Keeping and maintaining statutory records</span>
-                                <p class="text-gray-500 text-sm mt-1">Organized, up-to-date records that meet all legal
-                                    requirements.</p>
+                        <div class="bg-offWhite p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-12 h-12 service-icon blue rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph ph-buildings text-2xl text-white"></i>
                             </div>
+                            <h4 class="font-bold text-brand-secondary mb-2">Institutional Strengthening</h4>
+                            <p class="text-gray-600 text-sm">Improving governance, processes, and systems to build a
+                                more robust and efficient organization.</p>
                         </div>
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Filing mandatory submissions to the
-                                    Registrar</span>
-                                <p class="text-gray-500 text-sm mt-1">Timely annual returns and notifications to avoid
-                                    penalties.</p>
+                        <div class="bg-offWhite p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-12 h-12 service-icon blue rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph ph-arrows-clockwise text-2xl text-white"></i>
                             </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Lodgment of documents and fee payments</span>
-                                <p class="text-gray-500 text-sm mt-1">We handle all submissions and associated payments
-                                    on your behalf.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-offWhite p-5 rounded-xl">
-                            <i class="ph ph-caret-right text-brand-primary text-lg mt-1"></i>
-                            <div>
-                                <span class="text-gray-700 font-medium">Advice on statutory document maintenance</span>
-                                <p class="text-gray-500 text-sm mt-1">Expert guidance on keeping your corporate
-                                    documents current and compliant.</p>
-                            </div>
+                            <h4 class="font-bold text-brand-secondary mb-2">Change Management</h4>
+                            <p class="text-gray-600 text-sm">Supporting organizations through transitions and helping
+                                teams adapt to new strategies and environments.</p>
                         </div>
                     </div>
 
-                    <!-- Value Proposition -->
-                    <div class="bg-brand-secondary/5 border-l-4 border-brand-primary p-6 rounded-r-xl mb-8">
-                        <h4 class="font-bold text-brand-secondary mb-2">Why Choose Our Secretarial Services?</h4>
-                        <p class="text-gray-600 text-sm">
-                            Stay compliant, avoid penalties, and focus on growing your business. Our team ensures your
-                            corporate obligations are met with precision and timeliness, giving you peace of mind and
-                            protecting your company's reputation.
-                        </p>
-                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-secondary mb-6" data-aos="fade-up">Why
+                        Associate With Us</h3>
+                    <ul class="space-y-4 mb-8" data-aos="fade-up">
+                        <li class="flex items-start gap-3">
+                            <i class="ph ph-check-circle text-brand-primary text-xl mt-1"></i>
+                            <span class="text-gray-600">Customized training modules to fit your specific needs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph ph-check-circle text-brand-primary text-xl mt-1"></i>
+                            <span class="text-gray-600">Experienced facilitators and industry experts</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph ph-check-circle text-brand-primary text-xl mt-1"></i>
+                            <span class="text-gray-600">Focus on practical application and sustainable results</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph ph-check-circle text-brand-primary text-xl mt-1"></i>
+                            <span class="text-gray-600">Holistic approach to organizational development</span>
+                        </li>
+                    </ul>
                 </div>
 
+                <!-- Sidebar -->
                 <div class="lg:w-1/3">
                     <div class="sticky top-28 space-y-8">
                         <div class="bg-brand-secondary text-white p-8 rounded-2xl">
-                            <h3 class="text-xl font-bold mb-4">Ready to Get Started?</h3>
-                            <p class="text-white/80 mb-6">Let us handle your corporate compliance needs.</p>
+                            <h3 class="text-xl font-bold mb-4">Enhance Your team</h3>
+                            <p class="text-white/80 mb-6">Contact us to discuss how we can help strengthen your
+                                organization's capacity.</p>
                             <a href="../contact.html"
                                 class="rhombus-primary w-full justify-center font-bold py-3 hover:-translate-y-1 transition-all rhombus-btn">
-                                <span>Request a Quote</span>
+                                <span>Request a Proposal</span>
                             </a>
                         </div>
+
                         <div class="bg-offWhite p-8 rounded-2xl">
                             <h3 class="text-lg font-bold text-brand-secondary mb-4">Other Services</h3>
                             <ul class="space-y-3">
@@ -355,6 +360,9 @@
                                 <li><a href="tax-advisory.html"
                                         class="flex items-center gap-2 text-gray-600 hover:text-brand-primary transition-colors"><i
                                             class="ph ph-arrow-right"></i> Tax Advisory & Outsourcing</a></li>
+                                <li><a href="company-secretarial.html"
+                                        class="flex items-center gap-2 text-gray-600 hover:text-brand-primary transition-colors"><i
+                                            class="ph ph-arrow-right"></i> Company Secretarial Services</a></li>
                                 <li><a href="financial-management.html"
                                         class="flex items-center gap-2 text-gray-600 hover:text-brand-primary transition-colors"><i
                                             class="ph ph-arrow-right"></i> Financial Management & Consulting</a></li>
@@ -369,16 +377,17 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-brand-secondary text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <img src="../assets/images/footerlogo.png" alt="PAD Consult"
                         class="h-16 md:h-20 lg:h-24 w-auto mb-6">
                     <p class="text-gray-400 text-sm">Delivering high-quality audit, tax, and advisory services.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Services</h4>
+                    <h4 class="font-bold mb-4 text-brand-gold">Services</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="audit-accounting.html" class="hover:text-brand-accent">Audit & Accounting</a></li>
                         <li><a href="tax-advisory.html" class="hover:text-brand-accent">Tax Advisory & Outsourcing</a>
@@ -393,7 +402,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <h4 class="font-bold mb-4 text-brand-gold">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="../index.html" class="hover:text-brand-accent">Home</a></li>
                         <li><a href="../about.html" class="hover:text-brand-accent">About Us</a></li>
@@ -402,22 +411,43 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center gap-2"><i class="ph ph-phone text-brand-accent"></i> 024 591 2363
+                    <h4 class="font-bold mb-4 text-brand-gold">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i
+                                class="ph ph-map-pin text-brand-lightBlue text-lg mt-0.5"></i><span>MRQH+JGP, Ritz
+                                Junction,<br>Madina Adenta High Way, Accra</span></li>
+                        <li class="flex flex-col gap-1" x-data="{ expanded: false }">
+                            <div class="flex items-center gap-3">
+                                <i class="ph ph-phone text-brand-lightBlue text-lg"></i>
+                                <span>024 591 2363 / 055 274 4179</span>
+                                <button @click="expanded = !expanded"
+                                    class="hover:text-brand-lightBlue transition-colors focus:outline-none"
+                                    aria-label="Toggle more phone numbers">
+                                    <i class="ph" :class="expanded ? 'ph-caret-up' : 'ph-caret-down'"></i>
+                                </button>
+                            </div>
+                            <div x-show="expanded" x-collapse class="pl-8 text-gray-400 text-sm">
+                                <span>024 166 2867 / 054 236 5050</span>
+                            </div>
                         </li>
-                        <li class="flex items-center gap-2"><i class="ph ph-envelope text-brand-accent"></i>
-                            padconsults@gmail.com</li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph ph-envelope text-brand-lightBlue text-lg"></i><a
+                                href="mailto:padconsults@gmail.com"
+                                class="hover:text-brand-lightBlue transition-colors">padconsults@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; <span id="currentYear"></span> PAD Consult Services.</p>
+                <p>&copy; <span id="currentYear"></span> PAD Consult Services. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true }); document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
     <!-- Chat Widget Integration -->
     <script src="../js/chat-widget.js"></script>
 </body>
